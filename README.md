@@ -44,10 +44,18 @@ node liri.js do-what-it-says
 
 1. Done using the command line
 
-![Alt Text](gifs/conert-terminal.gif)
+![Alt Text](gifs/concert-terminal.gif)
+
+![Alt Text](gifs/movie-terminal.gif)
+
+![Alt Text](gifs/spotify-terminal.gif)
 
 2. Done using random.txt
 
 ![Alt Text](gifs/concert-text.gif)
+
+![Alt Text](gifs/movie-text.gif)
+
+![Alt Text](gifs/spotify-text.gif)
 
 ###
