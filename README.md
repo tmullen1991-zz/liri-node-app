@@ -43,9 +43,11 @@ node liri.js do-what-it-says
 ### Gif Examples
 
 1. Done using the command line
-![Alt Text](./gifs/conert-terminal.gif)
+
+![Alt Text](gifs/conert-terminal.gif)
 
 2. Done using random.txt
-![Alt Text](gifs/concert-terminal.gif)
+
+![Alt Text](gifs/concert-text.gif)
 
 ###
