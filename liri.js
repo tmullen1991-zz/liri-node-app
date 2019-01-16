@@ -1,3 +1,4 @@
+// Global variables for npm package managers and APIs
 require("dotenv").config();
 var fs = require("fs");
 var axios = require("axios");
@@ -5,30 +6,10 @@ var keys = require("./keys.js");
 var Spotify = require('node-spotify-api')
 var spotify = new Spotify(keys.spotify);
 
+// Take terminal input and store in variables to be used below
 var input = process.argv[2];
 var url = process.argv.slice(3).join("+");
 var songName = process.argv.slice(3).join(" ");
-
-if (process.argv[2] === "do-what-it-says") {
-
-    fs.readFile("random.txt", 'utf8', function (err, data) {
-
-        if (err) {
-            return console.log(err);
-        }
-
-        input = data.slice(0, data.indexOf(" "));
-        url = data.slice(data.indexOf(" ") + 1, data.length);
-        url = url.split(" ").join("+")
-        songName = data.slice(data.indexOf(" ") + 1, data.length);
-        cases(input);
-
-    });
-
-} else {
-
-    cases(input);
-}
 
 var cases = function (input) {
 
@@ -126,3 +107,25 @@ var cases = function (input) {
             console.log("error");
     };
 };
+
+// If input was entered in random.txt 
+if (process.argv[2] === "do-what-it-says") {
+
+    fs.readFile("random.txt", 'utf8', function (err, data) {
+
+        if (err) {
+            return console.log(err);
+        }
+
+        input = data.slice(0, data.indexOf(" "));
+        url = data.slice(data.indexOf(" ") + 1, data.length);
+        url = url.split(" ").join("+")
+        songName = data.slice(data.indexOf(" ") + 1, data.length);
+        cases(input);
+
+    });
+
+} else {
+
+    cases(input);
+}
